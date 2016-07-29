@@ -12,7 +12,7 @@ public class ColorPoint extends Point {
         if (super.equals(o)) {
 
             ColorPoint cp = (ColorPoint) o;
-            if (cp.color.equals(((ColorPoint) o).color)){
+            if (cp.color.equals(color)){
                 return true;
             }
         }
