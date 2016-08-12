@@ -14,7 +14,7 @@ public class TestHashMap {
         Date birth = new Date();
 
 
-        for (int i = 0; i < 28; i++) {
+        for (int i = 0; i < 15; i++) {
             User user = new User(i,2000,"User #" + i, birth);
             hashMap.put(user,i+ " element");
         }
@@ -22,7 +22,7 @@ public class TestHashMap {
         User user = new User(5,2000,"User #" + 5, birth);
         System.out.println(hashMap.size());
         System.out.println(hashMap.tableLength());
-        System.out.println(hashMap.containsValue("10 element"));
+        System.out.println(hashMap.containsValue("15 element"));
         System.out.println(hashMap.containsKey(user));
 
         //HashMap.Node node = new HashMap<>.Node();

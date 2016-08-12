@@ -16,7 +16,7 @@ public class HashMap<K,V> implements Map<K,V> {
     private static final double LOAD_FACTOR = 0.75;
 
     public HashMap() {
-        this.table = (Node[]) Array.newInstance(Node.class, DEFAULT_TABLE_SIZE);;
+        this.table = (Node[]) Array.newInstance(Node.class, DEFAULT_TABLE_SIZE);
     }
 
     @Override
@@ -39,7 +39,7 @@ public class HashMap<K,V> implements Map<K,V> {
         if(key == null){
             return false;
         }
-        int position = getPosition(key);
+        int position = getPosition(key, table.length);
         if(table[position] == null){
             return false;
         } else {
@@ -66,9 +66,9 @@ public class HashMap<K,V> implements Map<K,V> {
         return false;
     }
 
-    private int getPosition(Object o) {
-        int hash = Math.abs(o.hashCode());
-        return hash % table.length;
+    private int getPosition(Object key, int length) {
+        int hash = Math.abs(key.hashCode());
+        return hash % length;
     }
 
     @Override
@@ -80,7 +80,7 @@ public class HashMap<K,V> implements Map<K,V> {
     public V put(K key, V value) {
 
 
-        int position = getPosition(key);
+        int position = getPosition(key, table.length);
 
         if(key == null){
             return null;
@@ -123,7 +123,20 @@ public class HashMap<K,V> implements Map<K,V> {
     }
 
     public void resize(int newSize){
-        Node[] newTable = Arrays.copyOf(table,newSize);
+        Node[] newTable = (Node[]) Array.newInstance(Node.class, newSize);
+        for (int j = 0; j < table.length; j++) {
+            Node e = table[j];
+            if (e != null) {
+                table[j] = null;
+                do {
+                    Node next = e.next;
+                    int i = getPosition(e.key,newSize);
+                    e.next = newTable[i];
+                    newTable[i] = e;
+                    e = next;
+                } while (e != null);
+            }
+        }
         table = newTable;
     }
 
