@@ -25,7 +25,6 @@ public class TestHashMap {
         System.out.println(hashMap.containsValue("15 element"));
         System.out.println(hashMap.containsKey(user));
 
-        //HashMap.Node node = new HashMap<>.Node();
 
 
     }
