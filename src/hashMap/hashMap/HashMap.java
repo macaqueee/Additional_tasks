@@ -29,8 +29,8 @@ public class HashMap<K,V> implements Map<K,V> {
     }
 
     @Override
-    public boolean isEmpty() {
-        return false;
+    public boolean isEmpty(){
+        return size == 0;
     }
 
     @Override
@@ -78,7 +78,8 @@ public class HashMap<K,V> implements Map<K,V> {
 
     @Override
     public V put(K key, V value) {
-       // int hash = Math.abs(key.hashCode());
+
+
         int position = getPosition(key);
 
         if(key == null){
