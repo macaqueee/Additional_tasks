@@ -14,6 +14,10 @@
           <option name="url" value="https://github.com/presly808/ACO8.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/rterp/GMapsFX.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="D:\java" />
