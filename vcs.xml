@@ -34,6 +34,10 @@
           <option name="url" value="https://github.com/presly808/ACP14.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/macaqueee/ArtCodeProfessional.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="D:\java" />
