@@ -42,6 +42,10 @@
           <option name="url" value="https://bitbucket.org/atlassian_tutorial/learn-development-platform-by-example-plugin-tutorial.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/presly808/ACP14ClientServer.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="D:\java" />
